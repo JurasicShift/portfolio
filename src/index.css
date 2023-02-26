@@ -174,14 +174,13 @@ select {
 /* 
 ======================================================== */
 
-html {
-	background-color: #171717;
-}
-
 body {
 	font-family: 'Righteous', cursive;
 	font-size: 20px;
 	color: #fff;
-	overflow: hidden;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 

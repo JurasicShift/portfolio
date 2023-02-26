@@ -1,17 +1,21 @@
 import './Home.css';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import PageMoniker from '../components/PageMoniker';
 
 class Home extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			path: window.location.pathname
+		}
 		this.imgFadeIn = this.imgFadeIn.bind(this);
 		this.titleEffect = this.titleEffect.bind(this);
 		this.roleEffect = this.roleEffect.bind(this);
 		this.starController = this.starController.bind(this);
         this.starTimings = this.starTimings.bind(this);
-		this.addBtn = this.addBtn.bind(this);
+		this.addBtn = this.addPageMoniker.bind(this);
 	}
+
 
 	componentDidMount() {
 		this.imgFadeIn();
@@ -83,7 +87,7 @@ class Home extends Component {
 			}
 		}
 
-		const btnCall = this.addBtn;
+		const btnCall = this.addPageMoniker;
 		const starCaller = this.starController;
 
 		function complete() {
@@ -142,13 +146,14 @@ class Home extends Component {
         return [windowDelay, windowComplete];
     }
 
-	addBtn() {
-		const btn = document.getElementById('sectionBtn');
-		btn.classList.add('sectionBtnShow');
+	addPageMoniker() {
+		const el = document.getElementById('pageMoniker');
+		el.classList.add('showPageMoniker');
 	}
 
 	render() {
 		return (
+			<div>
 			<div className="home">
 				<section className="star__Section" id="starSection">
 					<span className="star"></span>
@@ -167,13 +172,11 @@ class Home extends Component {
 							</p>
 						</div>
 					</section>
-					<section className="home__btn">
-						<Link className="home__btnlink" to={''} id="sectionBtn">
-							PORTFOLIO
-						</Link>
-					</section>
+					<PageMoniker page="PORTFOLIO" pageId="pageMoniker" />
 				</div>
 			</div>
+			</div>
+
 		);
 	}
 }

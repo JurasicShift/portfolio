@@ -4,7 +4,9 @@ NAVBAR
 =============================*/
 
 .navLayout {
-	z-index: 999;
+	position: fixed;
+	top: 0;
+	height: 100vh;
 }
 
 .navigation {
@@ -14,6 +16,7 @@ NAVBAR
 	height: 100%;
 	transition: 0.75s;
 	overflow: hidden;
+
 }
 
 .navigation:hover {
@@ -25,12 +28,14 @@ NAVBAR
 	top: 0;
 	left: 0;
 	width: 100%;
+
 }
 
 .navigation ul li {
 	position: relative;
 	width: 100%;
 	list-style: none;
+
 }
 
 .navigation ul li .link {
@@ -65,13 +70,8 @@ NAVBAR
 	white-space: nowrap;
 }
 
-.active {
-	/* color: #f7d7b7; */
-	color: #ad9eab;
-}
-
 .toggle {
-	position: absolute;
+	position: fixed;
 	top: 5px;
 	right: 5px;
 	width: 50px;

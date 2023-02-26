@@ -1,0 +1,20 @@
+/* .projects::-webkit-scrollbar {
+  display: none;
+
+} */
+
+.projects {
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 290px;
+	margin-top: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.projects {
+		top: 0;
+		margin-top: 0px;
+	}
+}

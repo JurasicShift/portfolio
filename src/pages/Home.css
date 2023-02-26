@@ -2,7 +2,7 @@
 BACKGROUND IMAGE 
 =========================================== */
 
-.home {
+/* .home {
     background-image: url('../public/img/bgImg2.jpg');
 	height: 100vh;
 	width: 100%;
@@ -21,7 +21,7 @@ BACKGROUND IMAGE
 	100% {
 		transform: scale(1);
 	}
-}
+} */
 
 /*===============================
 TITLE TEXT SECTION
@@ -93,68 +93,6 @@ TITLE TEXT SECTION
 	opacity: 1;
 }
 
-/* =================================
-BUTTON SECTION 
-================================= */
-
-.home__btn {
-	margin: 0 auto;
-	height: 90px;
-	box-sizing: border-box;
-	z-index: 0;
-	cursor: pointer;
-}
-
-.home__btn a {
-	text-decoration: none;
-	color: white;
-}
-
-.home__btnlink {
-	width: 150px;
-	height: 50px;
-	margin-top: 40px;
-	border: 2px solid white;
-	font-size: 15px;
-	letter-spacing: 3px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: -1;
-	opacity: 0;
-	transition: opacity 3s ease-in;
-}
-
-.sectionBtnShow {
-	opacity: 1;
-}
-
-.home__btnlink::before,
-.home__btnlink::after {
-	position: absolute;
-	z-index: 0;
-	transition: 1s;
-	content: '';
-}
-
-.home__btnlink::before {
-	height: 50px;
-	width: 130px;
-	border-top: 2px solid skyblue;
-	border-bottom: 2px solid skyblue;
-}
-
-.home__btnlink::after {
-	width: 150px;
-	height: 30px;
-	border-left: 2px solid skyblue;
-	border-right: 2px solid skyblue;
-}
-
-.home__btnlink::after:hover {
-	cursor: pointer;
-}
 
 /* =================================
 SHOOTING STAR 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink, Outlet } from 'react-router-dom';
 import './NavLayout.css';
 import Icons from './Icons';
-// import './Home';
+
 
 class NavLayout extends Component {
   constructor(props) {
@@ -63,39 +63,56 @@ class NavLayout extends Component {
         })
       }, 500);
   }
+  //"#ad9eab"
  render() {
+  let activeStyle = {
+    color:"#ad9eab",
+  }
   return (
     <div className="navLayout">
       <div className="navigation" id="navigation" style={{left: this.state.styleNavLeft}}>
 				<ul>
 					<li>
-						<NavLink className="link">
-							<span className="icon active"><i className="fas fa-home"></i></span>
-							<span className="title active">Home</span>
+						<NavLink 
+              className="link" 
+              to={'/'}
+              style={({isActive}) => isActive ? activeStyle : undefined}>
+							<span className="icon" ><i className="fas fa-home"></i></span>
+							<span className="title" >Home</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink className="link">
-							<span className="icon"><i className="fas fa-user-circle"></i></span>
-							<span className="title">About</span>
+						<NavLink 
+            className="link" 
+            to={'/about'}
+            style={({isActive}) => isActive ? activeStyle : undefined}>
+							<span className="icon" ><i className="fas fa-user-circle"></i></span>
+							<span className="title" >About</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink className="link">
-							<span className="icon"><i className="fas fa-drafting-compass"></i></span>
-							<span className="title">Porfolio</span>
+						<NavLink 
+            className="link"
+            to={'/projects'}
+            style={({isActive}) => isActive ? activeStyle : undefined}>
+							<span className="icon" ><i className="fas fa-drafting-compass"></i></span>
+							<span className="title" >Projects</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink className="link">
-							<span className="icon"><i className="fas fa-code-branch"></i></span>
-							<span className="title">Technology</span>
+						<NavLink className="link"
+            to={'/tech'}
+            style={({isActive}) => isActive ? activeStyle : undefined}>
+							<span className="icon" ><i className="fas fa-code-branch"></i></span>
+							<span className="title" >Technology</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink className="link">
-							<span className="icon"><i className="far fa-comments"></i></span>
-							<span className="title">Contact</span>
+						<NavLink className="link"
+            to={'/contact'}
+            style={({isActive}) => isActive ? activeStyle : undefined}>
+							<span className="icon" ><i className="far fa-comments"></i></span>
+							<span className="title" >Contact</span>
 						</NavLink>
 					</li>
 				</ul>
@@ -106,7 +123,7 @@ class NavLayout extends Component {
       <Outlet />
       <Icons />
     </div>
-
+     
   )
  }
 }
