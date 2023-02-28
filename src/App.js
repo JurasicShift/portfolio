@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Background from './components/Background';
-import NavLayout from './components/NavLayout';
+// import NavLayout from './components/NavLayout';
+import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -20,7 +21,7 @@ class App extends Component {
 			<div>
 				<Router>
 						<Background />
-						<NavLayout />
+						<Navigation />
 						<Routes>
 							<Route path="/" element={<Home />}></Route>
 							<Route path="/about" element={<About />}></Route>

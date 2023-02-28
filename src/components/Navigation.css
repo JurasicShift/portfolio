@@ -2,11 +2,12 @@
 /*=============================
 NAVBAR
 =============================*/
-
 .navLayout {
 	position: fixed;
 	top: 0;
-	height: 100vh;
+	height: 300px;
+	width: 100vw;
+	transition: height 0.75s;
 }
 
 .navigation {
@@ -16,7 +17,20 @@ NAVBAR
 	height: 100%;
 	transition: 0.75s;
 	overflow: hidden;
+}
 
+.navSmall {
+	position: absolute;
+	left: 0px;
+	width: 100vw;
+	height: 0%;
+	transition: 0.75s;
+	overflow: hidden;
+	background-color: rgba(34, 85, 153, 0.9);
+}
+
+.navSmallHeight {
+	height: 100%;
 }
 
 .navigation:hover {
@@ -28,21 +42,54 @@ NAVBAR
 	top: 0;
 	left: 0;
 	width: 100%;
+}
 
+.navSmall ul {
+	position: relative;
+	top: 150px;
 }
 
 .navigation ul li {
 	position: relative;
 	width: 100%;
 	list-style: none;
-
 }
+
+.navSmall ul li {
+	list-style: none;
+	
+}
+
+.navigation ul li a,
+.navigation ul li a,
+.navSmall ul li a,
+.navSmall ul li a {
+	opacity: 1;
+	transition: opacity 0.2s;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a:hover,
+.navSmall ul li a:hover,
+.navSmall ul li a:hover {
+	opacity: 0.7;
+}
+
+/* .navigation a:hover,
+.navSmal a:hover {
+	opacity: 0.7;
+} */
 
 .navigation ul li .link {
 	position: relative;
 	display: block;
 	width: 100%;
 	display: flex;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navSmall ul li .link {
 	text-decoration: none;
 	color: #fff;
 }
@@ -54,6 +101,13 @@ NAVBAR
 	height: 58px;
 	line-height: 58px;
 	text-align: center;
+}
+
+.navSmall ul li .link .icon {
+	min-width: 60px;
+	height: 58px;
+	line-height: 58px;
+	margin-right: 15px;
 }
 
 .navigation ul li .link .icon .fa {
@@ -83,7 +137,6 @@ NAVBAR
 }
 
 .iconTog {
-
 	transition: opacity 0.5s ease-in-out;
 }
 
@@ -98,21 +151,5 @@ NAVBAR
 
 @media only screen and (min-width: 992px) {
 
-	.navigation ul li .link .icon {
-		font-size: 25px;
-		padding: 10px 0;
-	}
 
-	.navigation ul li .link .title {
-		font-size: 23px;
-		padding: 10px 10px;
-	}
-
-	.toggle {
-		top: 10px;
-		right: 10px;
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
-	}
 }

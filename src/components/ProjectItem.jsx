@@ -1,15 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+
 import InfoSvg from './InfoSvg';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDraftingCompass } from '@fortawesome/free-solid-svg-icons';
+import  useViewport  from '../hooks/useViewport';
 import './ProjectItem.css';
+import Icons from './Icons';
 
 //add onFocus and onBlur for mobile devices!!!
 
 function ProjectItem(props) {
-	const windowRef = useRef(window.innerWidth);
-	const windowSize = windowRef.current;
 
 	const mappedObjs = props.projects.map((obj, idx) => {
 		return {
@@ -19,6 +20,9 @@ function ProjectItem(props) {
 	});
 
 	const [onHover, setOnHover] = useState(mappedObjs);
+	const { width } = useViewport();
+	const breakpoint = 1200;
+
 
 	function hoverImg(num) {
 		const projectsList = JSON.parse(JSON.stringify(onHover));
@@ -67,6 +71,7 @@ function ProjectItem(props) {
 		let marginAdd = {
 			marginBottom: "100px"
 		}
+
 		return (
 			<div
 				key={idx}
@@ -113,7 +118,9 @@ function ProjectItem(props) {
 						</div>
 					</div>
 				</div>
-				<div style={idx === 3 && windowSize < 1200 ? marginAdd : null}></div>
+				<div className='project__iconFlex' style={idx === 3 && width < breakpoint ? marginAdd : null}>
+					{idx === 3 && width < breakpoint ? <Icons /> : null}
+				</div>
 			</div>
 		);
 	});

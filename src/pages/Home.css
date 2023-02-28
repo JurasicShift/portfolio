@@ -2,27 +2,6 @@
 BACKGROUND IMAGE 
 =========================================== */
 
-/* .home {
-    background-image: url('../public/img/bgImg2.jpg');
-	height: 100vh;
-	width: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
-	transform: translateZ(0);
-	animation: bgSlide 1s;
-	z-index: -1;
-	position: relative;
-}
-
-@keyframes bgSlide {
-	0% {
-		transform: scale(10);
-	}
-	100% {
-		transform: scale(1);
-	}
-} */
-
 /*===============================
 TITLE TEXT SECTION
 ================================*/
@@ -182,24 +161,6 @@ SHOOTING STAR
 		line-height: 45px;
 		margin-left: 55px;
 		letter-spacing: 9px;
-	}
-
-	.navigation ul li a .icon {
-		font-size: 25px;
-		padding: 10px 0;
-	}
-
-	.navigation ul li a .title {
-		font-size: 23px;
-		padding: 10px 10px;
-	}
-
-	.toggle {
-		top: 10px;
-		right: 10px;
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
 	}
 }
 
